@@ -17,6 +17,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
         splash = new Timer();
+        //create Timer to run for 3sec
         splash.schedule(new Splash(),3000);
     }
 
