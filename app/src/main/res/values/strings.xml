@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TigerSpikeAssignment</string>
+    <string name="title_activity_flickr_feed">TigerSpikeAssignment</string>
 </resources>
