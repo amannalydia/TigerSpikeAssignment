@@ -1,6 +1,7 @@
 package com.tigerspike.assignment.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -15,6 +16,7 @@ import com.tigerspike.assignment.model.ImageData;
 import com.tigerspike.assignment.utility.RetrieveBitmapImage;
 import com.tigerspike.assignment.utility.AsyncTaskListener;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -24,9 +26,9 @@ import java.util.List;
 
 public class CardViewAdapter extends RecyclerView.Adapter<CardViewAdapter.ViewHolderImage> implements AsyncTaskListener {
     private Context context;
-    private List<ImageData> imgDataList;
+    private ArrayList<ImageData> imgDataList;
 
-    public CardViewAdapter(Context context,List<ImageData> imgDataList){
+    public CardViewAdapter(Context context,ArrayList<ImageData> imgDataList){
         this.context = context;
         this.imgDataList = imgDataList;
     }
@@ -39,10 +41,20 @@ public class CardViewAdapter extends RecyclerView.Adapter<CardViewAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(ViewHolderImage holder, int position) {
+    public void onBindViewHolder(ViewHolderImage holder, final int position) {
         ImageData img = imgDataList.get(position);
         holder.imgTitle.setText(img.getTitle());
         String imageStrURL = img.getImgUrl();
+        holder.info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(),ImageInfoActivity.class);
+                intent.putExtra("position",position);
+                intent.putParcelableArrayListExtra("ImageInformation",imgDataList);
+                view.getContext().startActivity(intent);
+
+            }
+        });
         //retrieve bitmap content from the string url of images
         new RetrieveBitmapImage(context, this, holder).execute(imageStrURL);
     }
@@ -64,13 +76,6 @@ public class CardViewAdapter extends RecyclerView.Adapter<CardViewAdapter.ViewHo
             share = (ImageView) itemView.findViewById(R.id.share);
             info = (ImageView) itemView.findViewById(R.id.info);
             share.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
-                }
-            });
-
-            info.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 

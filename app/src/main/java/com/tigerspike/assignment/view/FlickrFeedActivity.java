@@ -108,6 +108,10 @@ public class FlickrFeedActivity extends AppCompatActivity {
                         JSONObject obj = responseArray.getJSONObject(i);
                         img = new ImageData();
                         img.setTitle(obj.optString("title").toString());
+                        img.setDescription(obj.optString("description").toString());
+                        img.setAuthor(obj.optString("author").toString());
+                        img.setDate_taken(obj.optString("date_taken").toString());
+                        img.setTags(obj.optString("tags").toString());
                         JSONObject mediaObj = obj.getJSONObject("media");
                         img.setImgUrl(mediaObj.optString("m").toString());
                         imgList.add(i,img);

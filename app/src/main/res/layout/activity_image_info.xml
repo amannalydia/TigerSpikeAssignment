@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    tools:context="com.tigerspike.assignment.view.ImageInfoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="12sp"
+        android:text="text"/>
+
+    <TextView
+        android:id="@+id/titleValue"
+        android:layout_below="@id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginLeft="15dp"
+        android:textSize="14sp"
+        android:layout_marginTop="2dp"
+        />
+
+    <TextView
+        android:id="@+id/descriptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:layout_below="@id/titleValue"
+        android:layout_marginTop="15dp"
+        android:textSize="12sp"
+        android:text="description"
+        android:layout_marginLeft="15dp"
+        />
+
+    <TextView
+        android:id="@+id/descriptionValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_below="@id/descriptionText"
+        android:layout_marginTop="2dp"
+        android:textSize="14sp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/authorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:layout_below="@id/descriptionValue"
+        android:layout_marginTop="15dp"
+        android:textSize="12sp"
+        android:layout_marginLeft="15dp"
+        android:text="taken by"
+        />
+
+    <TextView
+        android:id="@+id/authorValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_below="@id/authorText"
+        android:layout_marginTop="2dp"
+        android:textSize="14sp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:layout_below="@id/authorValue"
+        android:layout_marginTop="15dp"
+        android:textSize="12sp"
+        android:layout_marginLeft="15dp"
+        android:text="date taken" />
+
+    <TextView
+        android:id="@+id/dateValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_below="@id/dateText"
+        android:layout_marginTop="2dp"
+        android:textSize="14sp"
+        android:layout_marginLeft="15dp" />
+
+    <TextView
+        android:id="@+id/tagsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:layout_below="@id/dateValue"
+        android:layout_marginTop="15dp"
+        android:textSize="12sp"
+        android:layout_marginLeft="15dp"
+        android:text="tags" />
+
+    <TextView
+        android:id="@+id/tagsValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_below="@id/tagsText"
+        android:layout_marginTop="2dp"
+        android:textSize="14sp"
+        android:layout_marginLeft="15dp"/>
+    </RelativeLayout>
+</ScrollView>
+
